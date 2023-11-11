@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    direction: rtl;
+}
+th,td{
+    padding: 10px;
+    text-align: center;
+
+}
+table{
+    width: 50%;
+}
+table th{
+    background-color: aqua;
+}
+table tr:nth-child(5){
+    background-color: blueviolet;
+}
