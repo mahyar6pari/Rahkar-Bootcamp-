@@ -1,0 +1,13 @@
+<h1>Todo App</h1>
+
+<form >
+    <input type="text" (input)="getname($event)" >
+    <button type="button" (click)="onhanking()">Done</button>
+</form>
+<ul>
+    <li *ngFor="let item of navebarli ;let i=index">
+       <p [ngClass]="{'color': selectedID==i}"> {{item}}</p>
+        <form ><button type="button" (click)="ondone(i)">Done</button>
+            <button type="button" (click)="onpack(i)">pake</button></form>
+    </li>
+</ul>
