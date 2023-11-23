@@ -1,0 +1,17 @@
+
+<ul>
+    <li *ngFor="let item of menuLinstItems">
+        <a [href]="item.link">{{item.title}}</a></li>
+</ul>
+
+<p [ngClass]="{'chengecolor':control}"
+[ngStyle]="{'font-size.px': fontsize}"
+[ngStyle]="{'background-collo':defultbackgroundcollor}">slamaaaa</p>
+<form >
+    <label for="Firsname">fname</label>
+    <input type="text" name="Firsname" (input)="Firstname($event)"><br><br>
+    <label for="Lasname">lname</label>
+    <input type="text" name="Lasname" (input)="lastname($event)" ><br><br>
+    <input type="text" name="Firsname" (input)="lastname($event)">
+<button type="button" (click)="onhandel()">ClickMe</button>
+</form>
