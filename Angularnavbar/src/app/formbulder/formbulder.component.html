@@ -1,0 +1,28 @@
+<form >
+<input (input)="search($event)" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+</form>
+<table class="table table-striped mb-5">
+    <tbody>
+        <tr>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Telephone</td>
+            <td>Email</td>
+        </tr>
+        <tr *ngFor="let item of items;let i=index">
+            <td>{{item.firstName}}</td>
+            <td>{{item.lastName}}</td>
+            <td>{{item.telephone}}</td>
+            <td>{{item.email}}</td>
+
+            <button (click)="Click(i)">Delet</button>
+        </tr>
+    </tbody>
+      </table>
+<form [formGroup]="form" class="d-flex flex-column  justify-content-center align-items-center mb-5 mt-5 ">
+    <input formControlName="firstName"  class="p-2 m-2" type="text" placeholder="first name">
+    <input formControlName="lastName" class="p-2 m-2" type="text" placeholder="last name">
+    <input formControlName="telephone" class="p-2 m-2" type="tel" placeholder="telephone">
+    <input formControlName="email" class="p-2 m-2" type="email" placeholder="email">
+    <button (click)="onClick()" type="button" class="btn btn-dark p-2 m-2">confirmation</button>
+</form>
