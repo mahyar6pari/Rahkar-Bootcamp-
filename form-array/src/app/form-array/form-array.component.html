@@ -1,0 +1,18 @@
+<form  class="d-flex flex-column  justify-content-center align-items-center mb-5 mt-5 ">
+    <div class="d-flex flex-row justify-content-center align-items-center input-group mb-3">
+        <div class="input-group-prepend">
+            <button (click)="creatOnclick()" class="btn btn-primary">+</button>
+        </div>
+        <input (input)="input($event)" type="tel" class="p-2 m-2" placeholder="Telephone" aria-label="Telephone" aria-describedby="basic-addon1">
+      </div>
+</form>
+<form  class="d-flex flex-column  justify-content-center align-items-center mb-5 mt-5 ">
+    <div  *ngFor="let item of items;let i=index" class="d-flex flex-row justify-content-center align-items-center input-group mb-3">
+        <div  class="input-group-prepend">
+            <button (click)="deletOnclick(i)" class="btn btn-primary">X</button>
+        </div>
+        <input   type="tel" class="p-2 m-2" placeholder="Telephone" aria-label="Telephone" aria-describedby="basic-addon1">
+      </div>
+
+      
+</form>
