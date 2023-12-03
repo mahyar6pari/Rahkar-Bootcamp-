@@ -1,0 +1,11 @@
+<div class="d-flex justify-content-around m-3 p-3 ali ">
+    <div *ngFor="let item of items;let i=index" class="card d-flex flex-column align-items-center bg-secondary " style="width: 18rem;">
+        <img [src]="item.image" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{item.title}}</h5>
+          <p class="card-text">{{item.price}}</p>
+          <button (click)="onclick(item.id)"  class="btn btn-dark">انتخاب محصول</button>
+        </div>
+      </div>
+</div>
+<router-outlet></router-outlet>

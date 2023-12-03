@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg " style="background-color: #8f6168;">
+    <div class="container-fluid">
+      <a class="navbar-brand">boot camp</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ">
+          <a *ngIf="!authService.isLogin"  routerLink="Logingpage"  class="nav-link active">ورود</a>
+          <a *ngIf="authService.isLogin" routerLink="Profile" class="nav-link active">پروفایل</a>
+          <a routerLink="./Mahsol" class="nav-link" >محصول</a>
+          <a routerLink="./log"  class="nav-link" >صفحه اصلی</a>
+          <a   aria-disabled="true"></a>
+        </div>
+      </div>
+    </div>
+  </nav>
