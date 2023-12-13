@@ -1,0 +1,20 @@
+<h1 class="d-flex flex-column mb-6 justify-content-center align-items-center">Telegram Bot</h1>
+<form [formGroup]="form" class="d-flex flex-column mb-6 justify-content-center align-items-center">
+    <div class="row">
+      <div class="col-lg-8 col-12">
+        <input type="text" formControlName="text" class="form-control" placeholder="text">
+        <input type="text" formControlName="photourl" class="form-control" placeholder="photourl">
+        <input type="text" formControlName="caption" class="form-control" placeholder="caption">
+        <input type="text" formControlName="tedadTosater" class="form-control" placeholder="Enter the number of buttons in the row">
+      </div>
+      <div formArrayName="items" class="d-flex flex-column mb-3 justify-content-center align-items-center " >
+      <ng-container *ngFor="let item of items.controls;let i=index;let first=first "  [formGroupName]="i" >
+        <input type="text" formControlName="name" class="form-control" placeholder="Enter the name of the button">
+        <span *ngIf="first"  (click)="add()" class="input-group-text"  id="basic-addon1">+</span>
+        <span *ngIf="!first" (click)="remove(i)" class="input-group-text"  id="basic-addon1">-</span>
+      </ng-container>
+    </div>
+    <button (click)="onclick()" class="btn btn-primary">submit</button>
+  </div>
+    
+    </form>
