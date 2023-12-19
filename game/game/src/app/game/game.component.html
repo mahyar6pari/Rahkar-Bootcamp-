@@ -1,0 +1,15 @@
+<div style="height: 200px; width:100% ;" class="d-flex justify-content-between mr-3 ">
+<form [formGroup]="form1" class="form-group bg-dark-subtle h-100 w-100  d-flex flex-column  align-items-center" > 
+    <div class="mt-5 d-flex flex-column w-50">
+      <input formControlName="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="EnterFull user name">
+    <button (click)="click1()" type="submit" class="btn btn-primary">Submit</button>
+  </div>
+  </form>
+  <form [formGroup]="form2" class="form-group mb-3 h-100 w-100 bg-info-subtle d-flex flex-column  align-items-center">
+    <div class="mt-5 d-flex flex-column w-50  ">
+        <input  formControlName="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="EnterFull user name">
+      <button  (click)="click2()" type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
+<router-outlet></router-outlet>
