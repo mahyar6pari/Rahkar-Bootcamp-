@@ -1,0 +1,13 @@
+<form>
+    <div [formGroup]="form" class="form-group">
+      <input formControlName="title" type="text" class="form-control" placeholder="text">
+    </div>
+    <button *ngIf="!defult" (click)="onsubmit()" type="submit" [disabled]="form.invalid" class="btn btn-primary">Submit</button>
+    <button *ngIf="defult" (click)="onsubmit()" type="submit" [disabled]="form.invalid" class="btn btn-primary">Update</button>
+  </form>
+  <app-taskes-iteams
+  *ngFor="let item of items"
+  [task]="item"
+  (done)="ondone($event)"
+  (deleted)="ondeleted($event)"
+  (edited)="onedited($event)"></app-taskes-iteams>

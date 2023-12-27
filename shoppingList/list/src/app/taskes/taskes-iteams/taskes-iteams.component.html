@@ -1,0 +1,11 @@
+<div class="d-flex justify-content-start mt-4 style a" >
+    <div class="ml-3 w-10">
+<p [ngStyle]="{'text-decoration': task.isDone ? 'line-through': 'none'}">{{task.title}}</p>
+</div>
+<div class="d-flex justify-content-evenly buttons " >
+<button *ngIf="!task.isDone" type="button" class="btn btn-primary" (click)="done.emit(task.id)">Done</button>
+<button *ngIf="task.isDone" type="button" class="btn btn-info" (click)="done.emit(task.id)">unDone</button>
+<button  type="button" class="btn btn-success" (click)="edited.emit(task.id)">Edited</button>
+<button  type="button" class="btn btn-danger" (click)="deleted.emit(task.id)">Delet</button>
+</div>
+</div>
