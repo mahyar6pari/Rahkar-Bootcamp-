@@ -5,3 +5,19 @@
 .buttons{
     width: 70%;
 }
+.c{
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+}
+.bgcolor
+{
+    background: #6a11cb;
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+}
+.text-decoration{
+    text-decoration: line-through;
+    text-decoration-color: aqua;
+
+}

@@ -37,14 +37,14 @@ getdata(){
     if (this.defult==Enums.submit) {
       console.log(this.form.value);
     this.serviceData.postdata(this.form.value).subscribe({next:(data)=>{
-      console.log("submit");
-  
+      console.log(data);
+      this.getdata()
     }})
-    this.getdata()
+   
   }
   else if (this.defult==Enums.update) {
     this.serviceData.updatedata(this.form.value,this.submitId).subscribe({next:(data)=>{
-      console.log("update");
+      console.log(data);
       this.getdata()
       this.defult=Enums.submit
     }})
@@ -55,13 +55,16 @@ getdata(){
     
   ondone(itemsId:number){
     this.serviceData.donedata(itemsId).subscribe((data)=>{
+      console.log(data);
+      this.getdata()
       })
-    this.getdata()
+   
     console.log(itemsId); 
   }
 
   ondeleted(itemsId:number){
-    this.serviceData.deletdata(itemsId).subscribe(()=>{
+    this.serviceData.deletdata(itemsId).subscribe((data)=>{
+      console.log(data);
       this.getdata()
     })
   }

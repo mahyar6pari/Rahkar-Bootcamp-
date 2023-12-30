@@ -2,6 +2,7 @@ const applyToTheDatabase=require('../model/taske.model')
 exports.adddata=async (req,res)=>{
 
 let re=await applyToTheDatabase.addDatabase(req.body)
+res.json('adddata:successfull')
 }
 exports.senddata=async (req,res)=>{
     
@@ -11,7 +12,7 @@ exports.senddata=async (req,res)=>{
     exports.donedata=async (req,res)=>{
         try {
             await applyToTheDatabase.doneData(req.params.id)
-            res.json({message:'Success'})
+            res.json({message:'done:Success'})
         } catch (error) {
             
         }
@@ -19,7 +20,7 @@ exports.senddata=async (req,res)=>{
         exports.deletdata=async (req,res)=>{
 
                 await applyToTheDatabase.deletData(req.params.id)
-                res.json({message:'Success'})
+                res.json({message:'delet:Success'})
           
             
         }
