@@ -1,0 +1,49 @@
+section{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+.nav{
+    background-color: rgb(68, 189, 156);
+    border-end-end-radius: 10%;
+    border-end-start-radius: 10%;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.li{
+    margin-top: 30px;
+    border-radius: 10px;
+    width: 80%;
+    height: 90px;
+    background-color: rgb(137, 179, 221);
+    display: flex;
+    flex-direction: column;
+    justify-content: row;
+    align-items: center;
+    justify-content: center;
+}
+svg{
+    width: 20px;
+    height: 20px;
+    margin-left: 25px;
+}
+.iconposition{
+width: 100%;
+display: flex;
+flex-direction: row;
+justify-content:space-between;
+}
+.title{
+    margin-right: 30px;
+}
+.cursol{
+    cursor: pointer;
+}

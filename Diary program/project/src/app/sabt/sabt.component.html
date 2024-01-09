@@ -1,0 +1,12 @@
+<section >
+    <div class="nav">
+        <h1 >نرم افزار مدیریت دلنوشت</h1>
+    </div>
+    <form [formGroup]="form">
+        <textarea formControlName="title" class="form-control" id="exampleFormControlTextarea1"  placeholder="Message" rows="3"></textarea>
+        <div class="a">
+        <button *ngIf="!serviceData.display" (click)="onclick()" type="button" class="btn" >ثبت دلنوشته</button>
+        <button *ngIf="serviceData.display" (click)="onupdate()" type="button" class="btn text" >بروز رسانی </button>
+    </div>
+    </form>
+</section>
