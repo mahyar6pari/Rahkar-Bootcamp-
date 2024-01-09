@@ -1,0 +1,58 @@
+<body>
+  <div [formGroup]="form" class="d-flex flex-row bd-highlight  flex">
+  <div class="widthtable">
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">موضوع</th>
+              <th scope="col">مبلغ</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of authService.transaction; let i=index">
+              <th *ngIf="item.title" scope="row">{{i+1}}</th>
+              <td *ngIf="item.title">{{item.title}}</td>
+              <td *ngIf="item.title">{{item.amount}}</td>
+              <td *ngIf="item.title"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAq1BMVEX////kBhO+FiPgCRXBFSHjAADowsK/Bhf0wcD7///gAAD66OS4AADEPkToOj7lAAa9Chv46+u+AADqx8rGOj/qOTv1xse/AA/gAAvisLDvsrDir7PurKv4+PrNaGznamjx4OD83+HQgITrfX7BMTTmKC3BIy7oICLrYmPogoHFTlLlRUvSd33v6ufgnZ7slZPqWVvxn6DSY2jco6Xpc3LWjY7kQkHRQUvmzsyOZOB5AAACeElEQVR4nO3cXVPaQBTG8YXkBDYEkhBsojQVfGlti9qqpX7/T9YViITNbjrMmD1cPP9xvPHC32TDyYuJQiCEEEInmqyn/YhH1PjNLUSHZbPxvtmk1tknNlSQJ/sGRfwe0ZBtUwWD/j7f6+0DCiiggAIKKKCAAgoooIACCiiggAIKKKCAAgoooIACCiiggAIKKKCAAgoooIACCiiggPqIpPa0qR0VD6W7R1HTUaq+1LdN54kVdTE6qFPVPDqob0P1KKxFn7s0ifJLfcX6dtQB8LLsdv0W0+NR4bJTkuoqPxZF112bRHpzJCq+XXQ/HuaWBbSh6KH7h9Ol+Jocg4q/ORijUmTmD6AFRY4el38yqswounN0vEmjI1Cpq4PglWlfN6LouyOS2lRjw75uQsWT1BlKnBsW0ITq+KB3kBQ/mvu6AUU/3ZlUQeL/H1XEjs8/V40FbKLoxa1J3jc+gA1UQQunJtWDrmqg6NG1qTkWdJQaB+6vaOZRO4qGzklCltpY0FD0y71JlSUtqKKX8VyOrnI7iq55XjyUqe/bUIU34npB8zm3oeg3272Esj4W6qj4rOQyCRlEZhTHONj3lJtQdMdpEkvTliq8Jd8bv2+tpk2Ug0vi1mR6k+io+NbhObC550hDeYzj4L1qLFSocM34XntVNRYqFAX8JilWgzpKHfS4SW/t7qNtUQUtGf8DQK3tmfEWFT7qt5CZ2o6FDUqNg5Mgid0F8wZFF6diEmI22KJofTom8ZrvUBm3pJ46M/Y9L3zhO40ypC6Yfa+g+xNaPTVC/0S+x3BJ3F46HhRr9rMDvWDK+IdHa38n3IJmMnvlJiCEEELoI/sHRcQ3vL9fE0UAAAAASUVORK5CYII=" alt=""></td>
+              <th *ngIf="!item.title" scope="row">{{i+1}}</th>
+              <td *ngIf="!item.title">واریزی</td>
+              <td *ngIf="!item.title">{{item.amount}}</td>
+              <td *ngIf="!item.title"><img src="data:image/jpeg;base64,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" alt=""></td>
+            </tr>
+          </tbody>
+        </table>
+        <p>{{authService.sum()+":مبلغ کل"}}</p>
+  </div>
+  <div class="widthform">
+  <section class="vh-100 gradient-custom">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div class="card bg-dark text-white" style="border-radius: 1rem;">
+              <div class="card-body p-5 text-center">
+    
+                <div class="mb-md-5 mt-md-4 pb-5">
+    
+                  <h2 class="fw-bold mb-2 text-uppercase">تراکنش</h2>
+                  <div class="form-outline form-white mb-4">
+                    <input formControlName="title" type="text"  class="form-control form-control-lg" />
+                    <label class="form-label" for="typeEmailX">موضوع</label>
+                  </div>
+    
+                  <div class="form-outline form-white mb-4">
+                    <input formControlName="Money" type="text" id="typePasswordX" class="form-control form-control-lg" />
+                    <label class="form-label" for="typePasswordX">مقدار پول </label>
+                  </div>
+                  <button (click)="onsubmit()"  class="btn btn-outline-light btn-lg px-5" type="submit">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  </div>
+  </body>

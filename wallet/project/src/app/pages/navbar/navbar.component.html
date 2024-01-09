@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light ">
+    <a class="navbar-brand" href="#">page</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a *ngIf="authService.localstrongfull" class="nav-link" routerLink="./Login" routerLinkActive="router-link-active" >Login</a>
+          <button (click)="logout()"  *ngIf="!authService.localstrongfull" class="nav-link" >logout</button>
+          
+        </li>
+        <li class="nav-item">
+          <a  class="nav-link" routerLink="./registr">Registr</a>
+        </li>
+        <li class="nav-item">
+          <button type="button" (click)="ontransaction()" class="nav-link" >transaction</button>
+        </li>
+        <li class="nav-item">
+            <button (click)="onwallet()" class="nav-link" >wallet</button>
+          </li>
+
+      </ul>
+
+    </div>
+    <hr>
+  </nav>

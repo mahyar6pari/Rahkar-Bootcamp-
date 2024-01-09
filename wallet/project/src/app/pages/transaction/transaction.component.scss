@@ -1,0 +1,33 @@
+.flex{
+    width: 100%;
+}
+
+.widthform{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.widthtable{
+    width: 30%;
+}
+table{
+    margin-top: 105px;
+    margin-right: 44px;
+}
+img{
+    width: 30px;
+    height: 30px;
+    background-color: black;
+}
+body{
+    background-color: rgb(85, 86, 91);
+  }
+.cs{
+    background-color: aliceblue;
+}
+section{
+    width: 100%;
+    
+}
